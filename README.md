@@ -36,12 +36,16 @@ A sequence of commands can be stored in a script. For example SQL comamnds can b
 <a name="python"></a>
 ## 🐍&nbsp;&nbsp;2. Python Essentials
 
+This section of INFS2822 is based on the Software Carpentry [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/) text.
+
 ### Basics
+_This section is based on [Python Software Carpentry set 1](https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html). If you are also taking INFS1609, you may wish to compare with INFS1609 [Elementary Programming](https://blairw.github.io/infs1609quickrefresher/#elementaryprogramming) for the equivalent in Java._
 
 - Variable assignment, e.g. `weight_kg = 60` (integer), `weight_kg = 60.0` (float), `weight_kg = 'sixty'` (String)
 - Printing to the command line with `print(..)`
 
 ### Working with CSV data
+_This section is based on [Python Software Carpentry set 2](https://swcarpentry.github.io/python-novice-inflammation/02-numpy/index.html)._
 
 ```python
 import numpy
@@ -72,6 +76,7 @@ print(numpy.diff(csvdata[31, :])    # cell minus previous cell for row 31
 ```
 
 ### Generating charts/graphs
+_This section is based on [Python Software Carpentry set 3](https://swcarpentry.github.io/python-novice-inflammation/03-matplotlib/index.html)._
 
 ```python
 import numpy
@@ -104,23 +109,8 @@ pp.savefig('file.png')
 pp.show()
 ```
 
-### Selections
-
-```python
-# using else-if (elif)
-if x > y:
-    print('x is bigger than y')
-elif x > z:
-    print('x is not bigger than y, but it is bigger than z')
-else:
-    print('x is less than y and z')
-
-# using logical operator (and, or, etc)
-if (x > y) and (x > z):
-    print('z is bigger than y and z')
-```
-
 ### Loops and Arrays
+_This section is based on [Python Software Carpentry set 4](https://swcarpentry.github.io/python-novice-inflammation/04-loop/index.html) and [Python Software Carpentry set 5](https://swcarpentry.github.io/python-novice-inflammation/05-lists/index.html). If you are also taking INFS1609, you may wish to compare with INFS1609 [Loops](https://blairw.github.io/infs1609quickrefresher/#loops) and [Arrays](https://blairw.github.io/infs1609quickrefresher/#arrays) for the equivalent in Java._
 
 ```python
 # incrementing
@@ -138,15 +128,8 @@ for this_food in foods:
     print(this_food)
 ```
 
-### Functions
-```python
-def bmi(mass_kg, height_m):
-    numerator = mass_kg
-    denominator = height_m ** 2
-    return numerator / denominator
-```
-
 ### Combine data from multiple files
+_This section is based on [Python Software Carpentry set 6](https://swcarpentry.github.io/python-novice-inflammation/06-files/index.html)._
 ```python
 import glob
 import numpy
@@ -154,6 +137,32 @@ import numpy
 filenames = sorted(glob.glob('dataset-2020-08-*.csv'))
 for filename in filenames:
     print(filename)
+```
+
+### Selections
+_This section is based on [Python Software Carpentry set 7](https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html). If you are also taking INFS1609, you may wish to compare with INFS1609 [Selections](https://blairw.github.io/infs1609quickrefresher/#selections) for the equivalent in Java._
+
+```python
+# using else-if (elif)
+if x > y:
+    print('x is bigger than y')
+elif x > z:
+    print('x is not bigger than y, but it is bigger than z')
+else:
+    print('x is less than y and z')
+
+# using logical operator (and, or, etc)
+if (x > y) and (x > z):
+    print('z is bigger than y and z')
+```
+
+### Functions
+_This section is based on [Python Software Carpentry set 8](https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html). If you are also taking INFS1609, you may wish to compare with INFS1609 [Methods](https://blairw.github.io/infs1609quickrefresher/#methods) for the equivalent in Java._
+```python
+def bmi(mass_kg, height_m):
+    numerator = mass_kg
+    denominator = height_m ** 2
+    return numerator / denominator
 ```
 
 <a name="projectmanagement"></a>
